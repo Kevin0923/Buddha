@@ -1,16 +1,18 @@
 package kevin.buddha.activity.splash;
 
 import kevin.buddha.activity.R;
-import kevin.buddha.activity.release.ReleaseActivity;
 import kevin.buddha.constant.DBConstant;
-import kevin.buddha.helper.persist.PersistHelper;
-import kevin.buddha.util.Global;
+import kevin.buddha.constant.KeyConstants;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SplashActivity extends Activity {
 
@@ -22,15 +24,41 @@ public class SplashActivity extends Activity {
         // 第一次，查询，是否有选择了佛，如果有，是第几个。
         // 否则，点击【佛】字，弹出到列表
         SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
-        if (share.getBoolean("isSelectedBuddha", false)) {
-            
+        if (share.getBoolean(KeyConstants.IS_SELECTED_BUDDHA, false)) {
+            alreadySelected();
         } else {
-            
+            notYetSelected();
         }
+
     }
 
-    private void first() {
+    private void alreadySelected() {
 
+    }
+
+    /**
+     * 未请佛
+     */
+    private void notYetSelected() {
+        // 显示提示
+        showTips();
+        // 设置事件
+        ImageView stoImage = (ImageView) this.findViewById(R.id.splash_text_fo);
+        stoImage.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent();
+                intent.setClass(SplashActivity.this, BuddhaNameList.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void showTips() {
+        Toast toast = Toast.makeText(getApplicationContext(), "尚未请佛，点击屏幕中的【佛】字", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, this.getWindowManager()
+                .getDefaultDisplay().getHeight() / 2);
+        toast.show();
     }
 
     @Override

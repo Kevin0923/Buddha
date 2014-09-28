@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name="kevin.buddha.activity.release.ReleaseActivity" />
+        <activity android:name="kevin.buddha.activity.splash.BuddhaNameList"
+            android:theme="@android:style/"
+             />
     </application>
 
 </manifest>

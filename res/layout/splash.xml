@@ -7,16 +7,16 @@
     tools:context=".SplashActivity" >
 
     <ImageView
-        android:id="@+id/text_fo"
+        android:id="@+id/splash_text_fo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/splash_text_fo" />
 
     <ImageView
-        android:id="@+id/textForce"
+        android:id="@+id/splash_text_force"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -24,16 +24,16 @@
         android:src="@drawable/splash_text_force" />
 
     <ImageView
-        android:id="@+id/cloud"
+        android:id="@+id/splash_cloud"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/text_fo"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/splash_text_fo"
+        android:layout_marginTop="10dp"
         android:src="@drawable/splash_cloud" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/splashText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
