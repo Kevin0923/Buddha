@@ -22,22 +22,65 @@ public final class R {
     }
     public static final class drawable {
         public static final int buddha_name_list_bg=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int splash_background=0x7f020002;
-        public static final int splash_cloud=0x7f020003;
-        public static final int splash_text_fo=0x7f020004;
-        public static final int splash_text_force=0x7f020005;
+        public static final int fo_001_big_rl=0x7f020001;
+        public static final int fo_001_name_rl=0x7f020002;
+        public static final int fo_002_big_emtf=0x7f020003;
+        public static final int fo_002_name_emtf=0x7f020004;
+        public static final int fo_003_big_ys=0x7f020005;
+        public static final int fo_003_name_ys=0x7f020006;
+        public static final int fo_004_big_gy=0x7f020007;
+        public static final int fo_004_name_gy=0x7f020008;
+        public static final int fo_005_big_ws=0x7f020009;
+        public static final int fo_005_name_ws=0x7f02000a;
+        public static final int fo_006_big_ml=0x7f02000b;
+        public static final int fo_006_name_ml=0x7f02000c;
+        public static final int fo_007_big_szgy=0x7f02000d;
+        public static final int fo_007_name_szgy=0x7f02000e;
+        public static final int fo_008_big_gey=0x7f02000f;
+        public static final int fo_008_name_gey=0x7f020010;
+        public static final int fo_009_big_yuelao=0x7f020011;
+        public static final int fo_009_name_yuelao=0x7f020012;
+        public static final int fo_010_big_mazu=0x7f020013;
+        public static final int fo_010_name_mazu=0x7f020014;
+        public static final int fo_011_big_wencs=0x7f020015;
+        public static final int fo_011_name_wencs=0x7f020016;
+        public static final int fo_012_big_wqxj=0x7f020017;
+        public static final int fo_012_name_wqxj=0x7f020018;
+        public static final int ic_launcher=0x7f020019;
+        public static final int splash_000text_fo=0x7f02001a;
+        public static final int splash_background=0x7f02001b;
+        public static final int splash_btn_start=0x7f02001c;
+        public static final int splash_cloud=0x7f02001d;
+        public static final int splash_text_force=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f080008;
         public static final int splashText=0x7f080003;
+        public static final int splash_btn=0x7f080005;
         public static final int splash_cloud=0x7f080002;
+        public static final int splash_fo_001_big_rl=0x7f080004;
+        public static final int splash_fo_002_big_emtf=0x7f080006;
         public static final int splash_text_fo=0x7f080000;
         public static final int splash_text_force=0x7f080001;
+        public static final int splash_viewPager=0x7f080007;
     }
     public static final class layout {
         public static final int buddha_name_list=0x7f030000;
         public static final int splash=0x7f030001;
+        public static final int splash_00=0x7f030002;
+        public static final int splash_01=0x7f030003;
+        public static final int splash_02=0x7f030004;
+        public static final int splash_03=0x7f030005;
+        public static final int splash_04=0x7f030006;
+        public static final int splash_05=0x7f030007;
+        public static final int splash_06=0x7f030008;
+        public static final int splash_07=0x7f030009;
+        public static final int splash_08=0x7f03000a;
+        public static final int splash_09=0x7f03000b;
+        public static final int splash_10=0x7f03000c;
+        public static final int splash_11=0x7f03000d;
+        public static final int splash_12=0x7f03000e;
+        public static final int splash_main=0x7f03000f;
     }
     public static final class menu {
         public static final int start=0x7f070000;
@@ -51,11 +94,13 @@ public final class R {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -74,5 +119,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int BuddhaListDialog=0x7f060002;
     }
 }

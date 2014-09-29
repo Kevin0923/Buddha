@@ -5,6 +5,8 @@
     android:layout_margin="30dp"
     android:background="@drawable/buddha_name_list_bg"
     android:gravity="top"
-    tools:context=".BuddhaNameList" >
+    tools:context=".BuddhaNameListDialog" >
 
+    
+    
 </RelativeLayout>

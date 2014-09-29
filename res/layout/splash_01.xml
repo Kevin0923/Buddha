@@ -2,18 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background"
-    android:gravity="top"
-    tools:context=".SplashActivity" >
+    android:background="@drawable/splash_background" >
 
     <ImageView
-        android:id="@+id/splash_text_fo"
+        android:id="@+id/splash_fo_001_big_rl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/splash_000text_fo" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-20dp"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:src="@drawable/fo_001_big_rl" />
 
     <ImageView
         android:id="@+id/splash_text_force"
@@ -27,25 +27,17 @@
         android:id="@+id/splash_cloud"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/splash_text_fo"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/splash_fo_001_big_rl"
+        android:layout_marginTop="-55dp"
         android:src="@drawable/splash_cloud" />
 
-    <TextView
-        android:id="@+id/splashText"
+    <Button
+        android:id="@+id/splash_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginTop="5dp"
-        android:lineSpacingMultiplier="1.5"
-        android:singleLine="false"
-        android:text="@string/splashText"
-        android:textColor="#e7a434"
-        android:textSize="16sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/splash_btn_start" />
 
 </RelativeLayout>
