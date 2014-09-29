@@ -54,15 +54,25 @@ public final class R {
         public static final int splash_text_force=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f080012;
         public static final int splashText=0x7f080003;
         public static final int splash_btn=0x7f080005;
         public static final int splash_cloud=0x7f080002;
         public static final int splash_fo_001_big_rl=0x7f080004;
         public static final int splash_fo_002_big_emtf=0x7f080006;
+        public static final int splash_fo_003_big_ys=0x7f080007;
+        public static final int splash_fo_004_big_gy=0x7f080008;
+        public static final int splash_fo_005_big_ws=0x7f080009;
+        public static final int splash_fo_006_big_ml=0x7f08000a;
+        public static final int splash_fo_007_big_szgy=0x7f08000b;
+        public static final int splash_fo_008_big_gey=0x7f08000c;
+        public static final int splash_fo_009_big_yuelao=0x7f08000d;
+        public static final int splash_fo_010_big_mazu=0x7f08000e;
+        public static final int splash_fo_011_big_wencs=0x7f08000f;
+        public static final int splash_fo_012_big_wqxj=0x7f080010;
         public static final int splash_text_fo=0x7f080000;
         public static final int splash_text_force=0x7f080001;
-        public static final int splash_viewPager=0x7f080007;
+        public static final int splash_viewPager=0x7f080011;
     }
     public static final class layout {
         public static final int buddha_name_list=0x7f030000;

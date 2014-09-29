@@ -5,15 +5,15 @@
     android:background="@drawable/splash_background" >
 
     <ImageView
-        android:id="@+id/splash_fo_001_big_rl"
+        android:id="@+id/splash_fo_012_big_wqxj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-20dp"
-        android:scaleX="0.9"
-        android:scaleY="0.9"
-        android:src="@drawable/fo_001_big_rl" />
+        android:scaleX="0.85"
+        android:scaleY="0.85"
+        android:src="@drawable/fo_012_big_wqxj" />
 
     <ImageView
         android:id="@+id/splash_text_force"
@@ -27,8 +27,8 @@
         android:id="@+id/splash_cloud"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/splash_fo_001_big_rl"
-        android:layout_marginTop="-55dp"
+        android:layout_above="@+id/splash_btn"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/splash_cloud" />
 
     <Button
