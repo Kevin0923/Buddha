@@ -2,11 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
-    android:background="@drawable/buddha_name_list_bg"
-    android:gravity="top"
-    tools:context=".BuddhaNameListDialog" >
+    android:background="#ffffff"
+    tools:context=".PrayActivity" >
 
-    
-    
+    <ImageView
+        android:id="@+id/pray_bg_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_bg_head" />
+
+    <ImageView
+        android:id="@+id/pray_bg_name_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pray_bg_name_board" />
+
+    <ImageView
+        android:id="@+id/pray_bg_main_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_head"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_bg_main_top" />
+
+    <ImageView
+        android:id="@+id/pray_bg_main_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_main_top"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_bg_main_bottom" />
+
 </RelativeLayout>
