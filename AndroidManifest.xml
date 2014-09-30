@@ -13,12 +13,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="kevin.buddha.activity.splash.Splash2Activity"
+            android:name="kevin.buddha.activity.splash.SplashActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="kevin.buddha.activity.release.ReleaseActivity" />

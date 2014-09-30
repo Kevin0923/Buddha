@@ -75,7 +75,7 @@ public final class R {
         public static final int splash_viewPager=0x7f080011;
     }
     public static final class layout {
-        public static final int buddha_name_list=0x7f030000;
+        public static final int pray=0x7f030000;
         public static final int splash=0x7f030001;
         public static final int splash_00=0x7f030002;
         public static final int splash_01=0x7f030003;
@@ -90,7 +90,8 @@ public final class R {
         public static final int splash_10=0x7f03000c;
         public static final int splash_11=0x7f03000d;
         public static final int splash_12=0x7f03000e;
-        public static final int splash_main=0x7f03000f;
+        public static final int splash_buddha_name_list=0x7f03000f;
+        public static final int splash_main=0x7f030010;
     }
     public static final class menu {
         public static final int start=0x7f070000;
