@@ -5,7 +5,7 @@
     android:background="@drawable/splash_background" >
 
     <ImageView
-        android:id="@+id/splash_fo_010_big_mazu"
+        android:id="@+id/splash_fo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -38,6 +38,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
-        android:background="@drawable/splash_btn_start" />
+        android:background="@drawable/splash_btn_start"
+        android:scaleX="0.85"
+        android:scaleY="0.85" />
 
 </RelativeLayout>

@@ -7,7 +7,7 @@
     tools:context=".SplashActivityDeprecated" >
 
     <ImageView
-        android:id="@+id/splash_text_fo"
+        android:id="@+id/splash_fo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

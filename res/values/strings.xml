@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Buddha</string>
+    <string name="app_name">求神拜佛</string>
     <string name="action_settings">Settings</string>
     <string name="splashText">拜佛可积莫大功德，调身少病、忏悔业障、帮助修定。为自己往生来世，家人幸福安康得到庇佑，诚心拜佛，功德无量，阿弥陀佛。</string>
+    <string name="splash_list_dialog_title">选择您要请的佛像</string>
 
+    <string name="buddha_name_00">如来（释迦牟尼）</string>
+    <string name="buddha_name_01">阿弥陀佛</string>
+    <string name="buddha_name_02">药师佛</string>
+    <string name="buddha_name_03">观音菩萨</string>
+    <string name="buddha_name_04">文殊菩萨</string>
+    <string name="buddha_name_05">弥勒佛</string>
+    <string name="buddha_name_06">送子观音</string>
+    <string name="buddha_name_07">关二爷</string>
+    <string name="buddha_name_08">月老</string>
+    <string name="buddha_name_09">妈祖</string>
+    <string name="buddha_name_10">文财神</string>
+    <string name="buddha_name_11">文曲星君</string>
+
+    
 </resources>

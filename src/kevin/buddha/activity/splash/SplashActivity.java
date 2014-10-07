@@ -1,12 +1,16 @@
 package kevin.buddha.activity.splash;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import kevin.buddha.activity.R;
 import kevin.buddha.activity.pray.PrayActivity;
+import kevin.buddha.constant.Constants;
 import kevin.buddha.constant.DBConstant;
 import kevin.buddha.constant.KeyConstants;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -15,12 +19,18 @@ import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 public class SplashActivity extends Activity implements OnPageChangeListener {
@@ -28,6 +38,13 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
     private ArrayList<View> list;
     private int maxSize = 0;
     private int currentItem = 0;
+
+    private Dialog listDialog = null;
+    private ListView listView = null;
+    // 记录所有listview的item的数据
+    private List<HashMap<String, Object>> mapLists = null;
+    private SimpleAdapter adapter = null;
+    private int buddhaCount = Constants.BUDDHA_NAME_RES_ID.length;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,13 +89,39 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
         setContentView(main);
         viewPager.setAdapter(new MyAdapter());
         viewPager.setOnPageChangeListener(new MyListener());
-        viewPager.setCurrentItem(currentItem);
+
+        inflater = LayoutInflater.from(this);
+        View viewDialog = inflater.inflate(R.layout.splash_listdialog_container, null);
+        Display display = this.getWindowManager().getDefaultDisplay();
+        int width = display.getWidth();
+
+        // 设置对话框的宽高
+        LayoutParams layoutParams = new LayoutParams(width * 85 / 100, LayoutParams.WRAP_CONTENT);
+        listDialog = new Dialog(this);
+        listDialog.setTitle(R.string.splash_list_dialog_title);
+        listDialog.setContentView(viewDialog, layoutParams);
+
+        listView = (ListView) viewDialog.findViewById(R.id.splash_listdialog_container);
+        mapLists = new ArrayList<HashMap<String, Object>>();
+        // 设置一个默认值
+        HashMap<String, Object> map = null;
+
+        for (int i = 0; i < buddhaCount; i++) {
+            map = new HashMap<String, Object>();
+            map.put("item", getResources().getString(Constants.BUDDHA_NAME_RES_ID[i]));
+            mapLists.add(map);
+        }
+
+        adapter = new SimpleAdapter(this, mapLists, R.layout.splash_listdialog_item, new String[] { "item" },
+                new int[] { R.id.splash_listdialog_item });
+        listView.setAdapter(adapter);
     }
 
     /**
      * 已选择佛像
      */
     private void hasSelected() {
+        viewPager.setCurrentItem(currentItem);
 
     }
 
@@ -86,11 +129,26 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
      * 未选择佛像
      */
     private void notSelected() {
+        viewPager.setCurrentItem(0);
         // 显示提示
         Toast toast = Toast.makeText(getApplicationContext(), "点击屏幕中的【佛】或 左右滑动 选择佛像", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, this.getWindowManager().getDefaultDisplay()
                 .getHeight() / 2 - 50);
         toast.show();
+
+    }
+
+    private void showListDialog() {
+        listDialog.show();
+
+        listView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("pos : " + position + ", id : " + id);
+                listDialog.dismiss();
+                viewPager.setCurrentItem(position + 1);
+            }
+        });
     }
 
     private class MyAdapter extends PagerAdapter {
@@ -157,35 +215,34 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
 
         @Override
         public void onPageSelected(final int index) {
+            // 初始页面的佛字、每个页面的佛 都有点击事件
             View view = list.get(index);
-            // 初始页面的佛字点击事件
-            if (index == 0) {
-                view.findViewById(R.id.splash_text_fo).setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View arg0) {
-                        System.out.println("点击佛字");
-                    }
-                });
-                return;
-            }
-
-            // 12个佛像的按钮事件
-            view.findViewById(R.id.splash_btn).setOnClickListener(new OnClickListener() {
+            view.findViewById(R.id.splash_fo).setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
-                    // 保存选择了的佛的下标索引
-                    SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
-                    Editor editor = share.edit();
-                    editor.putInt(KeyConstants.SELECTED_BUDDHA_INDEX, index);
-                    editor.commit();
-
-                    // 跳转到拜佛页面
-                    Intent intent = new Intent();
-                    intent.setClass(SplashActivity.this, PrayActivity.class);
-                    intent.putExtra(KeyConstants.SELECTED_BUDDHA_INDEX, index);
-                    startActivity(intent);
+                    showListDialog();
                 }
             });
+
+            // 12个佛像的按钮事件
+            if (index > 0) {
+                view.findViewById(R.id.splash_btn).setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        // 保存选择了的佛的下标索引
+                        SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
+                        Editor editor = share.edit();
+                        editor.putInt(KeyConstants.SELECTED_BUDDHA_INDEX, index);
+                        editor.commit();
+
+                        // 跳转到拜佛页面
+                        Intent intent = new Intent();
+                        intent.setClass(SplashActivity.this, PrayActivity.class);
+                        intent.putExtra(KeyConstants.SELECTED_BUDDHA_INDEX, index);
+                        startActivity(intent);
+                    }
+                });
+            }
         }
     }
 

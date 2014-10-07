@@ -47,48 +47,55 @@ public final class R {
         public static final int fo_012_big_wqxj=0x7f020017;
         public static final int fo_012_name_wqxj=0x7f020018;
         public static final int ic_launcher=0x7f020019;
-        public static final int pray_bg_foot=0x7f02001a;
-        public static final int pray_bg_head=0x7f02001b;
-        public static final int pray_bg_main=0x7f02001c;
-        public static final int pray_bg_main_bottom=0x7f02001d;
-        public static final int pray_bg_main_top=0x7f02001e;
-        public static final int pray_bg_name_board=0x7f02001f;
-        public static final int pray_object_flower_vase=0x7f020020;
-        public static final int pray_object_fo_seat=0x7f020021;
-        public static final int pray_object_fruits_dish=0x7f020022;
-        public static final int pray_object_light=0x7f020023;
-        public static final int pray_object_luzi=0x7f020024;
-        public static final int pray_object_money_box=0x7f020025;
-        public static final int splash_000text_fo=0x7f020026;
-        public static final int splash_background=0x7f020027;
-        public static final int splash_btn_start=0x7f020028;
-        public static final int splash_cloud=0x7f020029;
-        public static final int splash_text_force=0x7f02002a;
+        public static final int icx_launcher=0x7f02001a;
+        public static final int pray_bg_foot=0x7f02001b;
+        public static final int pray_bg_head=0x7f02001c;
+        public static final int pray_bg_main=0x7f02001d;
+        public static final int pray_bg_main_bottom=0x7f02001e;
+        public static final int pray_bg_main_top=0x7f02001f;
+        public static final int pray_bg_name_board=0x7f020020;
+        public static final int pray_menu_00_blur=0x7f020021;
+        public static final int pray_menu_00_focus=0x7f020022;
+        public static final int pray_menu_01_blur=0x7f020023;
+        public static final int pray_menu_01_focus=0x7f020024;
+        public static final int pray_menu_02_blur=0x7f020025;
+        public static final int pray_menu_02_focus=0x7f020026;
+        public static final int pray_menu_03_blur=0x7f020027;
+        public static final int pray_menu_03_focus=0x7f020028;
+        public static final int pray_menu_04_blur=0x7f020029;
+        public static final int pray_menu_04_focus=0x7f02002a;
+        public static final int pray_object_flower_vase=0x7f02002b;
+        public static final int pray_object_fo_seat=0x7f02002c;
+        public static final int pray_object_fruits_dish=0x7f02002d;
+        public static final int pray_object_light=0x7f02002e;
+        public static final int pray_object_luzi=0x7f02002f;
+        public static final int pray_object_money_box=0x7f020030;
+        public static final int splash_000text_fo=0x7f020031;
+        public static final int splash_background=0x7f020032;
+        public static final int splash_btn_start=0x7f020033;
+        public static final int splash_cloud=0x7f020034;
+        public static final int splash_text_force=0x7f020035;
     }
     public static final class id {
-        public static final int action_settings=0x7f080016;
+        public static final int action_settings=0x7f080012;
         public static final int pray_bg_head=0x7f080000;
-        public static final int pray_bg_main_bottom=0x7f080003;
-        public static final int pray_bg_main_top=0x7f080002;
-        public static final int pray_bg_name_board=0x7f080001;
-        public static final int splashText=0x7f080007;
-        public static final int splash_btn=0x7f080009;
-        public static final int splash_cloud=0x7f080006;
-        public static final int splash_fo_001_big_rl=0x7f080008;
-        public static final int splash_fo_002_big_emtf=0x7f08000a;
-        public static final int splash_fo_003_big_ys=0x7f08000b;
-        public static final int splash_fo_004_big_gy=0x7f08000c;
-        public static final int splash_fo_005_big_ws=0x7f08000d;
-        public static final int splash_fo_006_big_ml=0x7f08000e;
-        public static final int splash_fo_007_big_szgy=0x7f08000f;
-        public static final int splash_fo_008_big_gey=0x7f080010;
-        public static final int splash_fo_009_big_yuelao=0x7f080011;
-        public static final int splash_fo_010_big_mazu=0x7f080012;
-        public static final int splash_fo_011_big_wencs=0x7f080013;
-        public static final int splash_fo_012_big_wqxj=0x7f080014;
-        public static final int splash_text_fo=0x7f080004;
-        public static final int splash_text_force=0x7f080005;
-        public static final int splash_viewPager=0x7f080015;
+        public static final int pray_bg_main_bottom=0x7f080002;
+        public static final int pray_bg_main_top=0x7f080001;
+        public static final int pray_bg_name_board=0x7f080003;
+        public static final int pray_menu_00=0x7f080004;
+        public static final int pray_menu_01=0x7f080005;
+        public static final int pray_menu_02=0x7f080006;
+        public static final int pray_menu_03=0x7f080007;
+        public static final int pray_menu_04=0x7f080008;
+        public static final int splashText=0x7f08000c;
+        public static final int splash_btn=0x7f08000e;
+        public static final int splash_cloud=0x7f08000b;
+        public static final int splash_fo=0x7f08000d;
+        public static final int splash_listdialog_container=0x7f08000f;
+        public static final int splash_listdialog_item=0x7f080010;
+        public static final int splash_text_fo=0x7f080009;
+        public static final int splash_text_force=0x7f08000a;
+        public static final int splash_viewPager=0x7f080011;
     }
     public static final class layout {
         public static final int pray=0x7f030000;
@@ -106,8 +113,9 @@ public final class R {
         public static final int splash_10=0x7f03000c;
         public static final int splash_11=0x7f03000d;
         public static final int splash_12=0x7f03000e;
-        public static final int splash_buddha_name_list=0x7f03000f;
-        public static final int splash_main=0x7f030010;
+        public static final int splash_listdialog_container=0x7f03000f;
+        public static final int splash_listdialog_item=0x7f030010;
+        public static final int splash_main=0x7f030011;
     }
     public static final class menu {
         public static final int start=0x7f070000;
@@ -115,7 +123,20 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int buddha_name_00=0x7f050004;
+        public static final int buddha_name_01=0x7f050005;
+        public static final int buddha_name_02=0x7f050006;
+        public static final int buddha_name_03=0x7f050007;
+        public static final int buddha_name_04=0x7f050008;
+        public static final int buddha_name_05=0x7f050009;
+        public static final int buddha_name_06=0x7f05000a;
+        public static final int buddha_name_07=0x7f05000b;
+        public static final int buddha_name_08=0x7f05000c;
+        public static final int buddha_name_09=0x7f05000d;
+        public static final int buddha_name_10=0x7f05000e;
+        public static final int buddha_name_11=0x7f05000f;
         public static final int splashText=0x7f050002;
+        public static final int splash_list_dialog_title=0x7f050003;
     }
     public static final class style {
         /** 

@@ -5,7 +5,7 @@
     android:background="@drawable/splash_background" >
 
     <ImageView
-        android:id="@+id/splash_fo_003_big_ys"
+        android:id="@+id/splash_fo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

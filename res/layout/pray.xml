@@ -9,18 +9,11 @@
         android:id="@+id/pray_bg_head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/pray_bg_head" />
-
-    <ImageView
-        android:id="@+id/pray_bg_name_board"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pray_bg_name_board" />
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/pray_bg_head" />
 
     <ImageView
         android:id="@+id/pray_bg_main_top"
@@ -37,5 +30,65 @@
         android:layout_below="@+id/pray_bg_main_top"
         android:adjustViewBounds="true"
         android:src="@drawable/pray_bg_main_bottom" />
+
+    <ImageView
+        android:id="@+id/pray_bg_name_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_bg_name_board" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pray_bg_foot"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="-20dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/pray_menu_00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pray_menu_00_blur" />
+
+        <ImageView
+            android:id="@+id/pray_menu_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pray_menu_01_blur" />
+
+        <ImageView
+            android:id="@+id/pray_menu_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pray_menu_02_focus" />
+
+        <ImageView
+            android:id="@+id/pray_menu_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pray_menu_03_blur" />
+
+        <ImageView
+            android:id="@+id/pray_menu_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pray_menu_04_blur" />
+    </LinearLayout>
 
 </RelativeLayout>
