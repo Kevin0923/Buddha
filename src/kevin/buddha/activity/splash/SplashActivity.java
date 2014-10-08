@@ -53,15 +53,15 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
 
         SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
         currentItem = share.getInt(KeyConstants.SELECTED_BUDDHA_INDEX, 0);
-
+        System.out.println("currentItem : " + currentItem);
         initial();
 
         // 第一次，查询，是否有选择了佛，如果有，是第几个。
         // 否则，点击【佛】字，弹出到列表
         if (currentItem == 0) {
-            hasSelected();
-        } else {
             notSelected();
+        } else {
+            hasSelected();
         }
     }
 
@@ -117,25 +117,54 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
         listView.setAdapter(adapter);
     }
 
+    private void showPray(int index) {
+        finish();
+        // 保存选择了的佛的下标索引
+        SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
+        Editor editor = share.edit();
+        editor.putInt(KeyConstants.SELECTED_BUDDHA_INDEX, index);
+        editor.commit();
+
+        // 跳转到拜佛页面
+        Intent intent = new Intent();
+        intent.setClass(SplashActivity.this, PrayActivity.class);
+        intent.putExtra(KeyConstants.SELECTED_BUDDHA_INDEX, index);
+        startActivity(intent);
+    }
+
+    private void firstTextEvent(final int index) {
+        View view = list.get(index);
+        view.findViewById(R.id.splash_fo).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                showListDialog();
+            }
+        });
+    }
+
     /**
      * 已选择佛像
      */
     private void hasSelected() {
-        viewPager.setCurrentItem(currentItem);
-
+        showPray(currentItem);
     }
 
     /**
      * 未选择佛像
      */
     private void notSelected() {
+        // 展示第一个页面
         viewPager.setCurrentItem(0);
+
+        // 添加点击事件
+        firstTextEvent(0);
+
         // 显示提示
-        Toast toast = Toast.makeText(getApplicationContext(), "点击屏幕中的【佛】或 左右滑动 选择佛像", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "正在初始化...\n点击屏幕中的【佛】或 左右滑动 选择佛像",
+                Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, this.getWindowManager().getDefaultDisplay()
                 .getHeight() / 2 - 50);
         toast.show();
-
     }
 
     private void showListDialog() {
@@ -216,30 +245,15 @@ public class SplashActivity extends Activity implements OnPageChangeListener {
         @Override
         public void onPageSelected(final int index) {
             // 初始页面的佛字、每个页面的佛 都有点击事件
-            View view = list.get(index);
-            view.findViewById(R.id.splash_fo).setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View arg0) {
-                    showListDialog();
-                }
-            });
+            firstTextEvent(index);
 
             // 12个佛像的按钮事件
             if (index > 0) {
+                View view = list.get(index);
                 view.findViewById(R.id.splash_btn).setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View arg0) {
-                        // 保存选择了的佛的下标索引
-                        SharedPreferences share = getSharedPreferences(DBConstant.SHARED_PATH, 0);
-                        Editor editor = share.edit();
-                        editor.putInt(KeyConstants.SELECTED_BUDDHA_INDEX, index);
-                        editor.commit();
-
-                        // 跳转到拜佛页面
-                        Intent intent = new Intent();
-                        intent.setClass(SplashActivity.this, PrayActivity.class);
-                        intent.putExtra(KeyConstants.SELECTED_BUDDHA_INDEX, index);
-                        startActivity(intent);
+                        showPray(index);
                     }
                 });
             }

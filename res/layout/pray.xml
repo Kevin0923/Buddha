@@ -5,6 +5,8 @@
     android:background="#ffffff"
     tools:context=".PrayActivity" >
 
+    <!-- 顶部 -->
+
     <ImageView
         android:id="@+id/pray_bg_head"
         android:layout_width="wrap_content"
@@ -15,6 +17,8 @@
         android:scaleY="1.1"
         android:src="@drawable/pray_bg_head" />
 
+    <!-- 佛像背景 -->
+
     <ImageView
         android:id="@+id/pray_bg_main_top"
         android:layout_width="wrap_content"
@@ -23,14 +27,62 @@
         android:adjustViewBounds="true"
         android:src="@drawable/pray_bg_main_top" />
 
+    <!-- 桌子 -->
     <ImageView
-        android:id="@+id/pray_bg_main_bottom"
+        android:id="@+id/pray_bg_desk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pray_bg_main_top"
         android:adjustViewBounds="true"
-        android:src="@drawable/pray_bg_main_bottom" />
+        android:src="@drawable/pray_bg_desk" />
 
+    
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <!-- 佛座位 -->
+
+        <ImageView
+            android:id="@+id/pray_buddha_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="true"
+            android:scaleX="0.78"
+            android:src="@drawable/pray_buddha_seat" />
+
+        <!-- 佛像 -->
+
+        <ImageView
+            android:id="@+id/pray_buddha_big_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:adjustViewBounds="true"
+            android:scaleX="0.72"
+            android:scaleY="0.72"
+            android:src="@drawable/fo_001_big_rl" />
+    </FrameLayout>
+
+    <!-- 佛手按钮 -->
+
+    <ImageView
+        android:id="@+id/pray_buddha_fingger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/pray_buddha_fingger" />
+
+    <!-- 牌匾 -->
     <ImageView
         android:id="@+id/pray_bg_name_board"
         android:layout_width="wrap_content"
@@ -40,15 +92,29 @@
         android:adjustViewBounds="true"
         android:src="@drawable/pray_bg_name_board" />
 
+    <!-- 佛名 -->
+
+    <ImageView
+        android:id="@+id/pray_buddha_name_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/fo_001_name_rl" />
+
+    <!-- 菜单 -->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/pray_bg_foot"
-        android:paddingTop="5dp"
         android:layout_marginBottom="-20dp"
-        android:orientation="horizontal" >
+        android:background="@drawable/pray_bg_foot"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" >
 
         <ImageView
             android:id="@+id/pray_menu_00"
