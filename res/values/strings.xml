@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">求神拜佛</string>
+    <string name="app_name">拜佛</string>
     <string name="action_settings">Settings</string>
     <string name="splashText">拜佛可积莫大功德，调身少病、忏悔业障、帮助修定。为自己往生来世，家人幸福安康得到庇佑，诚心拜佛，功德无量，阿弥陀佛。</string>
     <string name="splash_list_dialog_title">选择您要请的佛像</string>

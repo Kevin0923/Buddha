@@ -6,7 +6,6 @@
     tools:context=".PrayActivity" >
 
     <!-- 顶部 -->
-
     <ImageView
         android:id="@+id/pray_bg_head"
         android:layout_width="wrap_content"
@@ -18,32 +17,30 @@
         android:src="@drawable/pray_bg_head" />
 
     <!-- 佛像背景 -->
-
     <ImageView
-        android:id="@+id/pray_bg_main_top"
+        android:id="@+id/pray_bg_of_buddha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pray_bg_head"
         android:adjustViewBounds="true"
-        android:src="@drawable/pray_bg_main_top" />
+        android:src="@drawable/pray_bg_of_buddha" />
 
     <!-- 桌子 -->
     <ImageView
         android:id="@+id/pray_bg_desk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pray_bg_main_top"
+        android:layout_below="@+id/pray_bg_of_buddha"
         android:adjustViewBounds="true"
         android:src="@drawable/pray_bg_desk" />
 
-    
     <FrameLayout
+        android:id="@+id/pray_buddha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true" >
 
         <!-- 佛座位 -->
-
         <ImageView
             android:id="@+id/pray_buddha_seat"
             android:layout_width="wrap_content"
@@ -55,7 +52,6 @@
             android:src="@drawable/pray_buddha_seat" />
 
         <!-- 佛像 -->
-
         <ImageView
             android:id="@+id/pray_buddha_big_img"
             android:layout_width="wrap_content"
@@ -67,19 +63,184 @@
             android:src="@drawable/fo_001_big_rl" />
     </FrameLayout>
 
-    <!-- 佛手按钮 -->
+    <!-- 左花瓶 -->
+    <ImageView
+        android:id="@+id/pray_object_flower_vase_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_object_flower_vase" />
 
+    <!-- 左花 -->
+    <ImageView
+        android:id="@+id/pray_object_flower_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pray_object_flower_vase_left"
+        android:layout_marginBottom="-23dp"
+        android:layout_marginLeft="-7dp"
+        android:adjustViewBounds="true"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:src="@drawable/flower_000_lianhua" />
+
+    <!-- 左蜡烛 -->
+
+    <ImageView
+        android:id="@+id/pray_object_light_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="-10dp"
+        android:layout_toRightOf="@+id/pray_object_flower_vase_left"
+        android:src="@drawable/pray_object_light" />
+
+    <!-- 右蜡烛 -->
+
+    <ImageView
+        android:id="@+id/pray_object_light_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="-10dp"
+        android:layout_toLeftOf="@+id/pray_object_flower_vase_right"
+        android:src="@drawable/pray_object_light" />
+
+    <!-- 右花瓶 -->
+    <ImageView
+        android:id="@+id/pray_object_flower_vase_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pray_object_flower_vase" />
+
+    <!-- 左花 -->
+    <ImageView
+        android:id="@+id/pray_object_flower_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pray_object_flower_vase_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-23dp"
+        android:layout_marginRight="-7dp"
+        android:adjustViewBounds="true"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:src="@drawable/flower_000_lianhua" />
+
+    <!-- 香炉 -->
+    <ImageView
+        android:id="@+id/pray_object_luzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/pray_object_luzi" />
+
+    <!-- 香 -->
+    <ImageView
+        android:id="@+id/pray_object_xiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_bg_of_buddha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleY="0.8"
+        android:src="@drawable/pray_object_xiang_000" />
+
+    <!-- 左水果 盘-->    <ImageView
+        android:id="@+id/pray_object_fruits_dish_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_object_flower_vase_left"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toLeftOf="@+id/pray_object_luzi"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/pray_object_fruits_dish" />
+
+    <!-- 左水果 -->    <ImageView
+        android:id="@+id/pray_object_fruits_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pray_object_fruits_dish_left"
+        android:layout_marginBottom="-23dp"
+        android:layout_marginRight="26dp"
+        android:layout_toLeftOf="@+id/pray_object_luzi"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/fruit_000_apple" />
+    
+    <!-- 右水果 盘-->
+    <ImageView
+        android:id="@+id/pray_object_fruits_dish_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_object_flower_vase_right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toRightOf="@+id/pray_object_luzi"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/pray_object_fruits_dish" />
+
+    <!-- 右水果 -->
+    <ImageView
+        android:id="@+id/pray_object_fruits_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pray_object_fruits_dish_right"
+        android:layout_marginBottom="-23dp"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/pray_object_luzi"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/fruit_000_apple" />
+    
+    <!-- 功德香-->
+    <ImageView
+        android:id="@+id/pray_object_money_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pray_object_fruits_dish_left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="-15dp"
+        android:adjustViewBounds="true"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/pray_object_money_box" />
+
+    <!-- 佛手按钮 -->
     <ImageView
         android:id="@+id/pray_buddha_fingger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="53dp"
         android:adjustViewBounds="true"
-        android:scaleX="0.7"
-        android:scaleY="0.7"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:src="@drawable/pray_buddha_fingger" />
 
     <!-- 牌匾 -->
@@ -105,7 +266,6 @@
         android:src="@drawable/fo_001_name_rl" />
 
     <!-- 菜单 -->
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,5 +316,6 @@
             android:adjustViewBounds="true"
             android:src="@drawable/pray_menu_04_blur" />
     </LinearLayout>
-
+    
+    
 </RelativeLayout>
